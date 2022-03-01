@@ -19,13 +19,12 @@ function create(req, res) {
   for (let key in req.body) {
     if(!req.body[key]) delete req.body[key];
   }
-
   const flight = new Flight(req.body)
   console.log(flight)
-  // movie.save(function(err) {
-  //   if (err) return res.redirect('/movies/new')
-  //   res.redirect('/movies')
-  // })
+  flight.save(function(err) {
+    if (err) return res.redirect('/flights/new')
+    res.redirect('/flights')
+  })
 }
 
 
