@@ -7,7 +7,7 @@ const mealSchema = new Schema({
   name: String
 })
 
-const Meal = mongoose.Model('Meal', mealSchema)
+const Meal = mongoose.model('Meal', mealSchema)
 
 export {
   Meal
