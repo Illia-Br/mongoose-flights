@@ -20,6 +20,12 @@
       <input type="text" name="name">
       <button type="submit">Add Meal</button>
     </form>
+      <h3>Check the meals we already have</h3>
+      <ul>
+        <% meals.forEach(meal => { %>
+          <li><%= meal.name %></li>
+        <% }) %>
+      </ul>
   </main>
 </body>
 </html>
