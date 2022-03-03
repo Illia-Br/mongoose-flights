@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <title><%= title %></title>
-</head>
-<body>
-  <nav>
-    <a href="/meals/new">Add Meal</a>
-    <a href="/flights">All Flights</a>
-    <a href="/flights/new">Add Flight</a>
-  </nav>
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
 
   <main>
     <h1><%= title %></h1>
@@ -24,7 +11,7 @@
       <div>Flight number: </div>
       <div><%= flight.flightNo %></div>
       <div>Departure time: </div>
-      <div><%= flight.departs %></div>
+      <div><%= flight.departs.toLocaleString() %></div>
       <div>Meals: </div>
     <ul>
       <% flight.meals.forEach(meal => { %>
@@ -38,7 +25,7 @@
         <option value="<%= meal._id %>"><%= meal.name %></option>
       <% }) %>
     </select>
-    <button type="submit">Add Meal</button>
+    <button type="submit">Add to Flight</button>
   </form>
     <h2>Tickets</h2>
   <form 
@@ -76,5 +63,4 @@
   <% } %>
   </main>
 
-</body>
-</html>
+  <%- include('../partials/footer') %>
