@@ -12,7 +12,7 @@ function index(req, res) {
 }
 
 function newFlight(req, res) {
-  res.render('flights/new', {title: 'Flight'})
+  res.render('flights/new', {title: 'New Flight'})
 }
 
 function create(req, res) {

@@ -23,7 +23,7 @@ body {
   background-color: gray;
   /* Use a system font, if none are available use an available sans-sarif font */
   margin: 0;
-  color: #424748;
+  /* color: black; */
   min-height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -48,17 +48,11 @@ body > main h1:first-child {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color: #42C2FF;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
-}
-
-nav > i {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
 }
 
 nav > a {
@@ -82,6 +76,44 @@ nav > a.active {
   color: white;
 }
 
+li {
+  list-style: none;
+}
+
+button:hover {
+  cursor: pointer;
+  border-color: white;
+  color: white;
+  background-color: #424748;
+}
+
+select, button, input {
+  font-size: 1.5rem;
+}
+
 .fas::before {
   font-family: "Font Awesome 5 Free";
+}
+
+.main-section > a {
+  padding: 10px;
+  margin: 0 20px;
+  text-decoration: none;
+  border: 2px solid;
+  color: black;
+}
+
+.main-section > a:hover {
+  color: white;
+  background-color: #424748;
+}
+
+#logo {
+  width: 40px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+#tickets {
+  margin-top: 20px;
 }
